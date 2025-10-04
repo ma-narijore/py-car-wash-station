@@ -50,7 +50,8 @@ class CarWashStation:
         """
            Add a new customer rating and update the average rating.
         """
-        res = ((self.average_rating * self.count_of_ratings) + rate) / (self.count_of_ratings + 1)
+        res = (((self.average_rating * self.count_of_ratings) + rate)
+               / (self.count_of_ratings + 1))
 
         self.average_rating = round(res, 1)
         self.count_of_ratings = self.count_of_ratings + 1
